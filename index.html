@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,74 +14,106 @@
   <link href="assets/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-        <script>
-            window.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            }, false);
-            document.onselectstart = function pauseEvent(e) {
-                if (e.stopPropagation) e.stopPropagation();
-                if (e.preventDefault) e.preventDefault();
-                e.cancelBubble = true;
-                e.returnValue = false;
-                return false;
-            }
-        </script>
-        <script>
-            $('img').mousedown(function (e) {
-            if(e.button == 2) { // right click
-                return false; // do nothing!
-            }
-            });
-        </script>
-        <script language="javascript">
-            var noPrint=true;
-            var noCopy=true;
-            var noScreenshot=true;
-            var autoBlur=true;
-        </script>
+  <script>
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, false);
+    document.onselectstart = function pauseEvent(e) {
+      if (e.stopPropagation) e.stopPropagation();
+      if (e.preventDefault) e.preventDefault();
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
+    }
+  </script>
+  <script>
+    $('img').mousedown(function (e) {
+      if (e.button == 2) { // right click
+        return false; // do nothing!
+      }
+    });
+  </script>
+  <script language="javascript">
+    var noPrint = true;
+    var noCopy = true;
+    var noScreenshot = true;
+    var autoBlur = true;
+  </script>
 </head>
 
 <body>
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
   <!-- ======= Header ======= -->
   <header id="header">
+
     <div class="d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">MD. JAHID HASAN</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/JahidCSE2" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="http://www.facebook.com/jahid.cse.kgm" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/jahidcsekgm/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.pinterest.com/jahidcsekurigram" class="google-plus"><i class="bx bxl-pinterest"></i></a>
-          <a href="https://linkedin.com/in/jahidcse96" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="http://jahidcse.great-site.net/rstu/"><i class="bx bxs-log-in"></i></a>
-        </div>
-      </div>
-
+      <div class="profile text-center" id="profile-section"></div>
       <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-book-content"></i> <span>Introduction</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user-pin"></i> <span>About</span></a></li>
-          <li><a href="#summary" class="nav-link scrollto"><i class="bx bxs-select-multiple"></i> <span>Summary & Key Skills</span></a></li>
-          <li><a href="#education" class="nav-link scrollto"><i class="bx bxs-graduation"></i> <span>Education Qualification</span></a></li>
-          <li><a href="#employment" class="nav-link scrollto"><i class="bx bxl-edge"></i> <span>Employment Experience</span></a></li>
-          <li><a href="https://jahidcsekurigram.github.io/app/" class="nav-link scrollto"><i class="bx bxs-terminal"></i> <span>Working Project</span></a></li>
-          <li><a href="#training" class="nav-link scrollto"><i class="bx bxl-microsoft-teams"></i> <span>Training Received</span></a></li>
-          <li><a href="#achievements" class="nav-link scrollto"><i class="bx bxs-certification"></i> <span>Achievements</span></a></li>
-          <li><a href="#reference" class="nav-link scrollto"><i class="bx bx-registered"></i> <span>Reference</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-phone-call"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+        <ul id="nav-links"></ul>
+      </nav>
     </div>
+
+    <script>
+      // Profile Info
+      const profileData = {
+        name: "MD. JAHID HASAN",
+        image: "assets/img/profile-img.jpg",
+        links: [
+          { href: "https://twitter.com/JahidCSE2", icon: "bxl-twitter", class: "twitter" },
+          { href: "http://www.facebook.com/jahid.cse.kgm", icon: "bxl-facebook", class: "facebook" },
+          { href: "https://www.instagram.com/jahidcsekgm/", icon: "bxl-instagram", class: "instagram" },
+          { href: "https://www.pinterest.com/jahidcsekurigram", icon: "bxl-pinterest", class: "google-plus" },
+          { href: "https://linkedin.com/in/jahidcse96", icon: "bxl-linkedin", class: "linkedin" },
+          { href: "http://jahidcse.great-site.net/rstu/", icon: "bxs-log-in", class: "" }
+        ]
+      };
+
+      // Navigation Links
+      const navLinks = [
+        { href: "#hero", icon: "bx-book-content", text: "Introduction" },
+        { href: "#about", icon: "bx-user-pin", text: "About" },
+        { href: "#summary", icon: "bxs-select-multiple", text: "Summary & Key Skills" },
+        { href: "#education", icon: "bxs-graduation", text: "Education Qualification" },
+        { href: "#employment", icon: "bxl-edge", text: "Employment Experience" },
+        { href: "https://jahidcsekurigram.github.io/app/", icon: "bxs-terminal", text: "Working Project" },
+        { href: "#training", icon: "bxl-microsoft-teams", text: "Training Received" },
+        { href: "#achievements", icon: "bxs-certification", text: "Achievements" },
+        { href: "#reference", icon: "bx-registered", text: "Reference" },
+        { href: "#contact", icon: "bx-phone-call", text: "Contact" }
+      ];
+
+      // Render Profile
+      const profileSection = document.getElementById('profile-section');
+      profileSection.innerHTML = `
+        <img src="${profileData.image}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">${profileData.name}</a></h1>
+        <div class="social-links mt-3 text-center">
+          ${profileData.links.map(link => `
+            <a href="${link.href}" class="${link.class}"><i class="bx ${link.icon}"></i></a>
+          `).join('')}
+        </div>
+      `;
+
+      // Render Nav Links
+      const navList = document.getElementById('nav-links');
+      navList.innerHTML = navLinks.map(link => `
+        <li>
+          <a href="${link.href}" class="nav-link scrollto">
+            <i class="bx ${link.icon}"></i> <span>${link.text}</span>
+          </a>
+        </li>
+      `).join('');
+    </script>
+
   </header><!-- End Header -->
 
   <!-- ======= Home Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Md. Jahid Hasan</h1>
-      <p><span class="typed" data-typed-items="B.Sc in Computer Science and Engineering, Rajshahi Science and Technology University"></span></p>
+      <p><span class="typed"
+          data-typed-items="B.Sc in Computer Science and Engineering, Rajshahi Science and Technology University"></span>
+      </p>
     </div>
   </section><!-- End Hero -->
 
@@ -88,268 +121,399 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" id="about-section"></div>
+      <script>
+        const aboutData = {
+          title: "About :",
+          intro: `Hello, My Name is <b>Md. Jahid Hasan</b>, and I am a <b>Computer Science and Engineering (CSE)</b> student
+                at <b>Rajshahi Science and Technology University (RSTU)</b>. I have experience in several programming
+                languages including Java, PHP, Python and SQL. I am interested in working specially in artificial
+                intelligence and machine learning, and I am currently working on web development projects, working on some
+                projects including <b>"Online Certificate Management System"</b>, <b>"School Management System"</b>
+                development. I learned a lot about the software development process and project management during that
+                experience. After graduation, I hope to work as a software engineer in a technology company, where I can
+                continue to develop my skills and contribute to innovative projects. In my spare time, I enjoy participating
+                in hackathons and learning about new technologies in the field.`,
+          image: "assets/img/profile-img.jpg",
+          education: [
+            "B.Sc. in Computer Science and Engineering (CSE)",
+            "Diploma in Computer Engineering"
+          ],
+          personalInfo: {
+            dob: "16th June 1996",
+            phone: "+8801792-940269",
+            pob: "Kurigram",
+            email: "jahidcsekurigram@gmail.com"
+          },
+          objectiveTitle: "Career Objective :",
+          objective: `I consider myself a Web Designer & capable of implementing a Website from start to finish, using my own
+                    initiative, Experience and Resources and delivering better Results.
+                    <br><br>
+                    I able to easily from being a Designer to Coder. This adaptability can also be seen in my work where I’m
+                    able to handle any task I’m given, be it Web Development, Multimedia, Graphics Design, Networking, Cyber
+                    Security, information security, and IT operations. Directed a work team taking the responsibilities of
+                    putting the PC's hardware parts together "build PCs", setup Operating Systems & other applications,
+                    Hardware and Software Troubleshoot, Peripherals configuration.`
+        };
 
+        const aboutContainer = document.getElementById("about-section");
+
+        aboutContainer.innerHTML = `
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-          <h2>About :</h2>
-          <p style="text-align: justify;">
-            Hello, My Name is <b>Md. Jahid Hasan</b>, and I am a <b>Computer Science and Engineering (CSE)</b> student at <b>Rajshahi Science and Technology University (RSTU)</b>. I have experience in several programming languages including Java, PHP, Python and SQL. I am interested in working specially in artificial intelligence and machine learning, and I am currently working on web development projects, working on some projects including <b>"Online Certificate Management System"</b>, <b>"School Management System"</b> development. I learned a lot about the software development process and project management during that experience. After graduation, I hope to work as a software engineer in a technology company, where I can continue to develop my skills and contribute to innovative projects. In my spare time, I enjoy participating in hackathons and learning about new technologies in the field.
-          </p>
+          <h2>${aboutData.title}</h2>
+          <p style="text-align: justify;">${aboutData.intro}</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid">
+            <img src="${aboutData.image}" class="img-fluid">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <br>
-            <h3 style="text-align: center;">Resume</h3><br>
-            <h4 class="fst-italic">
-              B.Sc. in Computer Science and Engineering (CSE)<br>
-              Diploma in Computer Engineering
+            <h3 style="text-align: center;">Portfolio</h3><br>
+            <h4>
+              ${aboutData.education.join("<br>")}
             </h4><br>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth :</strong> <span>16th June 1996</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Contact No :</strong> <span>+8801792-940269</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth :</strong> <span>${aboutData.personalInfo.dob}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Contact No :</strong> <span>${aboutData.personalInfo.phone}</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Place of Birth :</strong> <span>Kurigram</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>E-mail :</strong> <span>jahidcsekurigram@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Place of Birth :</strong> <span>${aboutData.personalInfo.pob}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>E-mail :</strong> <span>${aboutData.personalInfo.email}</span></li>
                 </ul>
               </div>
             </div>
-            <h3 style="text-decoration: underline;">Career Objective :</h3>
-            <p style="text-align: justify;">
-              I consider myself a Web Designer & capable of implementing a Website from start to finish, using my own initiative, Experience and Resources and delivering better Results.
-
-              I able to easily from being a Designer to Coder. This adaptability can also be seen in my work where I’m able to handle any task I’m given, be it Web Development, Multimedia, Graphics Design, Networking, Cyber Security, information security, and IT operations. Directed a work team taking the responsibilities of putting the PC's hardware parts together "build PCs", setup Operating Systems & other applications, Hardware and Software Troubleshoot, Peripherals configuration.               
-            </p>
+            <h3 style="text-decoration: underline;">${aboutData.objectiveTitle}</h3>
+            <p style="text-align: justify;">${aboutData.objective}</p>
           </div>
         </div>
+      `;
+      </script>
 
-      </div>
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
     <section id="summary" style="background-color: #ffeb7f;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title" style="text-decoration: underline;">Summary :</h3>
-            <div class="resume-item pb-0">
-                <ul style="list-style-type:circle;">
-                  <li>Responsive & Portfolio Website Design and Development.</li>
-                  <li>Database Driven Dynamic Website & cPanel / WHM Administration.</li>
-                  <li>Vector Graphics Design works.</li>
-                  <li>Software troubleshooting.</li>
-                  <li>Network’s infrastructure "servers, routers, access points, cabling", network administrating.</li>
-                  <li>CC Camera Setup & Configuration, POS System and POS printers, Scanners, Photocopy Maintenance and fix issues.</li>
-                  <li>Troubleshooting and maintenance of all old or new Desktop, Laptop, POS machine, check internet connection for office users and guests and fix.</li>
-              </ul>
-            </div>
-          </div>
+      <div class="container" id="summary-section"></div>
+      <script>
+        const summaryData = {
+          summaryTitle: "Summary :",
+          summaryList: [
+            "Responsive & Portfolio Website Design and Development.",
+            "Database Driven Dynamic Website & cPanel / WHM Administration.",
+            "Vector Graphics Design works.",
+            "Software troubleshooting.",
+            "Network’s infrastructure \"servers, routers, access points, cabling\", network administrating.",
+            "CC Camera Setup & Configuration, POS System and POS printers, Scanners, Photocopy Maintenance and fix issues.",
+            "Troubleshooting and maintenance of all old or new Desktop, Laptop, POS machine, check internet connection for office users and guests and fix."
+          ],
+          skillsTitle: "Key Skills :",
+          skillsList: [
+            "Adobe Dreamweaver for code writing.",
+            "Wordpress, Joomla Administration, CMS Template Building & Customizing",
+            "HTML, CSS, JavaScript, jQuery, Ajax, ASP.NET, Java, Python, C#, C++ and PHP-MySQL Programming Language.",
+            "Adobe Photoshop, Illustrator, 2D & 3D Animation with Flash & related software.",
+            "Microsoft Office Application and Typing (Bijoy, Avro, Unijoy) Keyboard layout.",
+            "TCP/IP System Administration.",
+            "Search Engine Optimization (SEO).",
+            "Networking in Linux OS (CentOS, SuSE, and Red Hat) and macOS, Ubuntu Windows Server OS (W2K3/W2K8) Platform.",
+            "Pivotal Cloud Foundry Platform (Gradle, GitHub).",
+            "Adobe Premier, After Effects, Corel Video Studio, Filmora, Cyberlink PowerDirector, Pinnacle Studio, MAGIX Vegas, DaVinci Resolve Studio and 3D Animation Video Editing knowledge.",
+            "Practical knowledge of SQL and database concepts."
+          ]
+        };
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title" style="text-decoration: underline;">Key Skills :</h3>
-            <div class="resume-item">
-              <ul style="list-style-type: circle;">
-                <li>Adobe Dreamweaver for code writing.</li>
-                <li>Wordpress, Joomla Administration, CMS Template Building & Customizing</li>
-                <li>HTML, CSS, JavaScript, jQuery, Ajax, ASP.NET, Java, Python, C#, C++ and PHP-MySQL Programming Language.</li>
-                <li>Adobe Photoshop, Illustrator, 2D & 3D Animation with Flash & related software.</li>
-                <li>Microsoft Office Application and Typing (Bijoy, Avro, Unijoy) Keyboard layout.</li>
-                <li>TCP/IP System Administration.</li>
-                <li>Search Engine Optimization (SEO).</li>
-                <li>Networking in Linux OS (CentOS, SuSE, and Red Hat) and macOS, Ubuntu Windows Server OS (W2K3/W2K8) Platform.</li>
-                <li>Pivotal Cloud Foundry Platform (Gradle, GitHub).</li>
-                <li>Adobe Premier, After Effects, Corel Video Studio, Filmora, Cyberlink PowerDirector, Pinnacle Studio, MAGIX Vegas, DaVinci Resolve Studio and 3D Animation Video Editing knowledge. </li>
-                <li>Practical knowledge of SQL and database concepts.</li>
-              </ul>
+        const summarySection = document.getElementById("summary-section");
+
+        summarySection.innerHTML = `
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title" style="text-decoration: underline;">${summaryData.summaryTitle}</h3>
+              <div class="resume-item pb-0">
+                <ul style="list-style-type:circle;">
+                  ${summaryData.summaryList.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title" style="text-decoration: underline;">${summaryData.skillsTitle}</h3>
+              <div class="resume-item">
+                <ul style="list-style-type:circle;">
+                  ${summaryData.skillsList.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              </div>
             </div>
           </div>
-          
-        </div>
-      </div>
+        `;
+      </script>
 
     </section><!-- End Facts Section -->
 
-    <!-- ======= Resume Section ======= -->
+
+    <!--=======Education Section======= -->
     <section id="education" style="background-color: #00ffff3b;" class="resume">
-      <div class="container">
+      <div class="container" id="education-section"></div>
 
-        <div class="section-title">
-          <h2>Educational Qualification :</h2>
-        </div>
+      <script>
+        const educationData = {
+          academic: [
+            {
+              title: "B.Sc. in Computer Science and Engineering",
+              year: "2022 - 2025",
+              details: [
+                "University : Rajshahi Science and Technology University (RSTU), Natore.",
+                "Department : Computer Science and Engineering (CSE)",
+                "Duration of Course : 4 Years.",
+                "Result : Applied."
+              ]
+            },
+            {
+              title: "Diploma in Computer Engineering",
+              year: "2016 - 2020",
+              details: [
+                "Institution Name : Vision Polytechnic Institute, Kurigram.",
+                "Board : Bangladesh Technical Education Board (BTEB).",
+                "Department : Computer Technology",
+                "Duration of Course : 4 Years.",
+                "Result : CGPA- 3.48 (out of 4.00)"
+              ]
+            },
+            {
+              title: "Secondary School Certificate",
+              year: "2013",
+              details: [
+                "Institution Name : Panchgachi High School, Kurigram.",
+                "Board : Dinajpur.",
+                "Result : GPA- 3.81 (out of 5.00)"
+              ]
+            },
+            {
+              title: "Junior School Certificate",
+              year: "2010",
+              details: [
+                "Institution Name : Panchgachi High School, Kurigram.",
+                "Board : Dinajpur.",
+                "Result : GPA- 3.29 (out of 5.00)"
+              ]
+            },
+            {
+              title: "Primary School Certificate",
+              year: "2007",
+              details: [
+                "Institution Name : Panchgachi Ashrafia Govt. Primry School, Kurigram.",
+                "Board : Directorate of Primary Education.",
+                "Result : GPA- 3.00 (out of 5.00)"
+              ]
+            }
+          ],
+          professionalSkills: {
+            title: "Industrial Attachment",
+            details: [
+              'Organization Name : "Project Solution Engineering and Consultancy Limited"',
+              "Address : 349/3, PS Bhabon Fakir Bari Moor, BIDC Road, DUET, Gazipur-1703.",
+              "Subject : Basic Software Development",
+              "Duration : Three Months."
+            ]
+          }
+        };
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Academic</h3>
-            <div class="resume-item pb-0">
-              <h4 style="text-transform: capitalize;">B.Sc. in Computer Science and Engineering :</h4>
-              <h5>2022 - Present</h5>
-                <ul style="list-style-type:square;">
-                  <li>University : Rajshahi Science and Technology University (RSTU), Natore.</li>
-                  <li>Department : Computer Science and Engineering (CSE)</li>
-                  <li>Duration of Course : Four Years.</li>
-                  <!-- <li>Passing Year : till now.</li>
-                  <li>Result : till now.</li> -->
-                </ul>
-            </div>
+        const educationSection = document.getElementById("education-section");
 
-            <div class="resume-item">
-              <h4 style="text-transform: capitalize;">Diploma in Computer Engineering :</h4>
-              <h5>2016 - 2020</h5>
-                <ul style="list-style-type:square;">
-                  <li>Institution Name : Vision Polytechnic Institute, Kurigram.</li>
-                  <li>Board : Bangladesh Technical Education Board (BTEB).</li>
-                  <li>Department : Computer Technology</li>
-                  <li>Duration of Course : Four Years.</li>
-                  <!-- <li>Passing Year : 2020.</li>
-                  <li>Result : CGPA- 3.48 (out of 4.00)</li> -->
-
-                </ul>
-            </div>
+        // Left Column (Academic)
+        const leftColumn = `
+      <div class="col-lg-6" data-aos="fade-up">
+        <h3 class="resume-title">Academic</h3>
+        ${educationData.academic.map(item => `
+          <div class="resume-item pb-0">
+            <h4 style="text-transform: capitalize;">${item.title} :</h4>
+            <h5>${item.year}</h5>
+            <ul style="list-style-type:square;">
+              ${item.details.map(detail => `<li>${detail}</li>`).join("")}
+            </ul>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Skills</h3>
-            <div class="resume-item">
-              <h4 style="text-transform: capitalize;">Industrial Attachment : </h4>
-              <ul style="list-style-type:square;">
-                <li>Organization Name : "Project Solution Engineering and Consultancy Limited"</li>
-                <li>Address : 349/3, PS Bhabon Fakir Bari Moor, BIDC Road, DUET, Gazipur-1703.</li>
-                <li>Subject			: Basic Software Development</li>
-                <li>Duration			: Three Months.</li>
-              </ul>
-            </div>
-          </div>
-          
-        </div>
-
+        `).join("")}
       </div>
-    </section><!-- End Resume Section -->
+    `;
+
+        // Right Column (Professional Skills)
+        const rightColumn = `
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Professional Skills</h3>
+        <div class="resume-item">
+          <h4 style="text-transform: capitalize;">${educationData.professionalSkills.title} : </h4>
+          <ul style="list-style-type:square;">
+            ${educationData.professionalSkills.details.map(detail => `<li>${detail}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+    `;
+
+        educationSection.innerHTML = `
+      <div class="section-title">
+        <h2>Educational Qualification :</h2>
+      </div>
+      <div class="row">
+        ${leftColumn}
+        ${rightColumn}
+      </div>
+    `;
+      </script>
+
+    </section><!-- End Education Section -->
+
 
     <!-- ======= Skills Section ======= -->
     <section id="employment" class="skills section-bg" style="background-color: #7fffd4ed; overflow-x: auto;">
       <div class="container">
-
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Employment Experience :</h2>
-          <table>
-              <tr style="background-color: #ff0b72; color: #fff;">
-                <th>Sl No</th>
-                <th>Name of Organization</th>
-                <th>Project Name</th>
-                <th>Designation/ Position</th>
-                <th colspan='1'>Duration</th>
-                <th>Address</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Office of the Registrar General, Ministry of Local Government</td>
-                <td>Birth & Death Register Book Online Entry</td>
-                <td>Data Entry Operator</td>
-                <td>01/07/2011 to 30/12/2011</td>
-                <td>District Administration, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Bangladesh Bureau of Statistics</td>
-                <td>Economic Census 2013</td>
-                <td>Data Entry Operator</td>
-                <td>01/02/2013 to 30/04/2013</td>
-                <td>Upazila Statistics Office, Kurigram Sadar, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Bangladesh Election Commission</td>
-                <td>Preparation of Electoral Roll with Photographs and Facilitating the Issuance of National Identity (ID) Card Project.</td>
-                <td>Data Entry Operator</td>
-                <td>24/08/2017 to 29/10/2017</td>
-                <td>District Election Office, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Bangladesh Election Commission</td>
-                <td>Smart National Identity Card Distribution Activities.</td>
-                <td>Data Entry Operator</td>
-                <td>01/12/2017 to 22/03/2018</td>
-                <td>Upazilla Election Office, Kurigram Sadar, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Department of Social Services</td>
-                <td>Online Allowance Management (MIS Software)</td>
-                <td>Data Entry Operator</td>
-                <td>01/06/2020 to 25/10/2020</td>
-                <td>Upazila Social Service Office, Kurigram Sadar, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Bangladesh Bureau of Statistics</td>
-                <td>Population and Housing Census-2022</td>
-                <td>Supervisor</td>
-                <td>15/06/2022 to 21/06/2022</td>
-                <td>Upazila Statistics Office, Kurigram Sadar, Kurigram.</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Department of Food</td>
-                <td>Verified digital database creation program of food friendly programs</td>
-                <td>Data Entry Operator</td>
-                <td>26/07/2022 to 20/12/2022</td>
-                <td>Upazila Food Office, Kurigram Sadar, Kurigram.</td>
-              </tr>
-          </table>
+          <div id="employment-table-wrapper" class="table-responsive"></div>
         </div>
       </div>
+
+      <script>
+        const employmentData = [
+          {
+            sl: 1,
+            organization: "Office of the Registrar General, Ministry of Local Government",
+            project: "Birth & Death Register Book Online Entry",
+            position: "Data Entry Operator",
+            duration: "01/07/2011 to 30/12/2011",
+            address: "District Administration, Kurigram."
+          },
+          {
+            sl: 2,
+            organization: "Bangladesh Bureau of Statistics",
+            project: "Economic Census 2013",
+            position: "Data Entry Operator",
+            duration: "01/02/2013 to 30/04/2013",
+            address: "Upazila Statistics Office, Kurigram Sadar, Kurigram."
+          },
+          {
+            sl: 3,
+            organization: "Bangladesh Election Commission",
+            project: "Preparation of Electoral Roll with Photographs and Facilitating the Issuance of National Identity (ID) Card Project.",
+            position: "Data Entry Operator",
+            duration: "24/08/2017 to 29/10/2017",
+            address: "District Election Office, Kurigram."
+          },
+          {
+            sl: 4,
+            organization: "Bangladesh Election Commission",
+            project: "Smart National Identity Card Distribution Activities.",
+            position: "Data Entry Operator",
+            duration: "01/12/2017 to 22/03/2018",
+            address: "Upazilla Election Office, Kurigram Sadar, Kurigram."
+          },
+          {
+            sl: 5,
+            organization: "Department of Social Services",
+            project: "Online Allowance Management (MIS Software)",
+            position: "Data Entry Operator",
+            duration: "01/06/2020 to 25/10/2020",
+            address: "Upazila Social Service Office, Kurigram Sadar, Kurigram."
+          },
+          {
+            sl: 6,
+            organization: "Bangladesh Bureau of Statistics",
+            project: "Population and Housing Census-2022",
+            position: "Supervisor",
+            duration: "15/06/2022 to 21/06/2022",
+            address: "Upazila Statistics Office, Kurigram Sadar, Kurigram."
+          },
+          {
+            sl: 7,
+            organization: "Department of Food",
+            project: "Verified digital database creation program of food friendly programs",
+            position: "Data Entry Operator",
+            duration: "26/07/2022 to 20/12/2022",
+            address: "Upazila Food Office, Kurigram Sadar, Kurigram."
+          }
+        ];
+
+        const employmentWrapper = document.getElementById("employment-table-wrapper");
+
+        const tableHTML = `
+        <table>
+          <thead>
+            <tr style="background-color: #ff0b72; color: #fff;">
+              <th>Sl No</th>
+              <th>Name of Organization</th>
+              <th>Project Name</th>
+              <th>Designation/ Position</th>
+              <th>Duration</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${employmentData.map(item => `
+              <tr>
+                <td>${item.sl}</td>
+                <td>${item.organization}</td>
+                <td>${item.project}</td>
+                <td>${item.position}</td>
+                <td>${item.duration}</td>
+                <td>${item.address}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+
+        employmentWrapper.innerHTML = tableHTML;
+      </script>
+
+
     </section><!-- End Skills Section -->
-    
+
+
     <section id="training" class="skills section-bg" style="background-color: #fd373730; overflow-x: auto;">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Training Received :</h2>
           <table>
-              <tr style="background-color: #12d512; color: #fff;">
-                <th>Sl No</th>
-                <th>Name of Training</th>
-                <th>Duration</th>
-                <th>Organized by</th>
-                <th>Location</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Smart National Identity Card Distribution Activities</td>
-                <td>1 days</td>
-                <td>Regional Election Office</td>
-                <td>Rangpur</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Flood Preparedness Programme Volunteer Training</td>
-                <td>1 days</td>
-                <td>CARE Bangladesh</td>
-                <td>Kurigram</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Training on Gender Responsive Disaster Risk Reduction and Resilience</td>
-                <td>2 days</td>
-                <td>National Resilience Programme, <br>Bangladesh Disaster Preparedness Centre (BDPC)</td>
-                <td>Kurigram</td>
-              </tr>
-              <tr>
-                <td style="padding: 7px;">4</td>
-                <td>Technical and Vocational Education and Training (TVET) of Computer Operation</td>
-                <td>4 month</td>
-                <td>Eco-Social Development Organization (ESDO)</td>
-                <td>Kurigram</td>
-              </tr>
+            <tr style="background-color: #12d512; color: #fff;">
+              <th>Sl No</th>
+              <th>Name of Training</th>
+              <th>Duration</th>
+              <th>Organized by</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Smart National Identity Card Distribution Activities</td>
+              <td>1 days</td>
+              <td>Regional Election Office</td>
+              <td>Rangpur</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Flood Preparedness Programme Volunteer Training</td>
+              <td>1 days</td>
+              <td>CARE Bangladesh</td>
+              <td>Kurigram</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Training on Gender Responsive Disaster Risk Reduction and Resilience</td>
+              <td>2 days</td>
+              <td>National Resilience Programme, <br>Bangladesh Disaster Preparedness Centre (BDPC)</td>
+              <td>Kurigram</td>
+            </tr>
+            <tr>
+              <td style="padding: 7px;">4</td>
+              <td>Technical and Vocational Education and Training (TVET) of Computer Operation</td>
+              <td>4 month</td>
+              <td>Eco-Social Development Organization (ESDO)</td>
+              <td>Kurigram</td>
+            </tr>
           </table>
 
         </div>
@@ -401,7 +565,7 @@
       </div>
     </section><!-- End Services Section -->
 
-     <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= -->
     <section id="reference" class="testimonials" style="background-color: #68ff0045;">
       <div class="container">
 
@@ -414,39 +578,42 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up">
-                <img src="assets/img/dewan_juel.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);" class="testimonial-img">
+                <img src="assets/img/dewan_juel.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);"
+                  class="testimonial-img">
                 <h3>Dewan Juel Rahman</h3>
                 <h4>Associate Professor (Dept: CSE)</h4>
                 <p>
-                  Rajshahi Science and Technology University (RSTU)<br>
+                  Rajshahi Science & Technology University (RSTU)<br>
                   Natore.<br>
-                  Cell # 01786-899445                   
+                  Cell # 01786-899445
                 </p>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/shabuz.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);" class="testimonial-img">
-                <h3>Md Shahidul Islam Shabuz</h3>
-                <h4>Lecturer (Dept: CSE)</h4>
+                <img src="assets/img/sabuj.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);"
+                  class="testimonial-img">
+                <h3>Muhammad Shahjalal Sabuj</h3>
+                <h4>Principal</h4>
                 <p>
-                  Rajshahi Science and Technology University (RSTU)<br>
-                  Natore.<br>
-                  Cell # 01631-330096                  
+                  Vision Polytechnic Institute<br>
+                  Kurigram.<br>
+                  Cell # 01722-915234
                 </p>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/nazmul.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);" class="testimonial-img">
+                <img src="assets/img/nazmul.jpg" height="90" style="filter:drop-shadow(0px 0px 14px #fff);"
+                  class="testimonial-img">
                 <h3>Md Nazmul Haque</h3>
                 <h4>Head Master</h4>
                 <p>
                   Alor Dishary Ideal School<br>
                   Gazipur.<br>
-                  Cell # 01739-018575                  
+                  Cell # 01739-018575
                 </p>
               </div>
             </div>
@@ -467,12 +634,13 @@
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-8 d-flex align-items-stretch">
+          <div class="col-lg-12 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Kurigram Sadar, Kurigram - 5600.</p>
+                <p>Village: Panati Para, Chattrapur, Post Office: Panchgachi-5600, Upazilla: Kurigram Sadar, District:
+                  Kurigram.</p>
               </div>
 
               <div class="email">
@@ -487,7 +655,9 @@
                 <p>+88 01792-940269, 01701-017472</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25596.608511847477!2d89.65851026689269!3d25.823275685927477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e2c94eb6dab649%3A0x95401b779a2046b1!2sAbed%20Ali%20Cottage!5e0!3m2!1sen!2sbd!4v1688276179817!5m2!1sen!2sbd" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d553.0004414851828!2d89.69664832472371!3d25.817425636199808!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1743842372895!5m2!1sen!2sbd"
+                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -534,7 +704,8 @@
 
   <!-- ======= Footer ======= -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/js/aos.js"></script>
