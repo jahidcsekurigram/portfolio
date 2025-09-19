@@ -207,7 +207,8 @@ table.table-sm th {
   html, body {
     margin: 0;
     padding: 0;
-    background: #fff;
+    height: auto;
+    overflow-x: hidden;
   }
 
   body {
