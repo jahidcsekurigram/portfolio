@@ -202,7 +202,11 @@ table.table-sm th {
     font-size: 9px;
   }
 }
-html {
-  -webkit-text-size-adjust: 80%;
-  text-size-adjust: 80%;
+
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.9);        
+    transform-origin: top left; 
+    width: 111%;                  
+  }
 }
