@@ -207,15 +207,12 @@ table.table-sm th {
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     background: #fff;
-    overflow: hidden;
   }
 
   body {
     transform: scale(0.85);
     transform-origin: top left;
     width: calc(100% / 0.85);
-    height: calc(100% / 0.85);
   }
 }
