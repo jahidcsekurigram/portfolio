@@ -202,18 +202,3 @@ table.table-sm th {
     font-size: 9px;
   }
 }
-
-@media (max-width: 768px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  .scale-wrapper {
-    transform: scale(0.85);
-    transform-origin: top left;
-    width: calc(100% / 0.85);
-    min-height: calc(100vh / 0.85);
-  }
-}
