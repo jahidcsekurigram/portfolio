@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jahid CSE || Portfolio ||</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/jahidcse_officedesk.jpg">
+    <title>Jahid CSE || Resume / Portfolio ||</title>
+    <link rel="icon" type="image/x-icon" href="dist/images/jahidcse_officedesk.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/swap.css">
-    <link rel="stylesheet" href="assets/css/fancybox.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/media_query.css">
-    <link rel="stylesheet" href="assets/css/jahidcse.css">
+    <link rel="stylesheet" href="dist/css/fancybox.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/slick.css">
+    <link rel="stylesheet" href="dist/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/media_query.css">
+    <link rel="stylesheet" href="dist/css/jahidcse.css">
 </head>
 
 <body>
@@ -53,57 +52,58 @@
                 <div class="col-xxl-3 col-xl-3 col-lg-4">
                     <div class="side-menu-main">
                         <div class="list-menu menu-list-main">
-                            <ul class="side-menu-ul">
-                                <li><a href="#introduction">Introduction <i class="fas fa-home"></i></a></li>
-                                <li><a href="#objective">Career Objective <i class="fas fa-flag"></i></a></li>
-                                <li><a href="#skills">Technical Skills <i class="fas fa-tools"></i></a></li>
-                                <li><a href="#education">Educational Qualification <i
-                                            class="fas fa-graduation-cap"></i></a></li>
-                                <li><a href="#achievements">Achievements <i class="fas fa-trophy"></i></a></li>
-                                <li><a href="#achievements">Industrial Attachment <i class="fas fa-briefcase"></i></a>
-                                </li>
-                                <li><a href="#details">Personal Details <i class="fas fa-user"></i></a></li>
-                                <li><a href="#address">Present & Permanent Address <i
-                                            class="fas fa-map-location-dot"></i></a></li>
-                                <li><a href="#projects">Software & Web Applications Projects <i
-                                            class="fas fa-code"></i></a></li>
-                                <li><a href="#experience">Employment Experience <i class="fas fa-building"></i></a></li>
-                                <li><a href="#experience">Training Received <i class="fas fa-book"></i></a></li>
-                                <li><a href="#reference">Reference <i class="fas fa-address-book"></i></a></li>
-                                <li><a href="#contact">Contact <i class="fas fa-envelope"></i></a></li>
-
-                            </ul>
+                            <ul class="side-menu-ul" id="side-menu"> </ul>
+                            <script>
+                                const menuItems = [
+                                    { id: "introduction", text: "Introduction", icon: "fas fa-play" },
+                                    { id: "objective", text: "Career Objective", icon: "fas fa-computer" },
+                                    { id: "skills", text: "Technical Skills", icon: "fas fa-tools" },
+                                    { id: "education", text: "Educational Qualification", icon: "fas fa-graduation-cap" },
+                                    { id: "achievements", text: "Achievements", icon: "fas fa-trophy" },
+                                    { id: "achievements", text: "Industrial Attachment", icon: "fas fa-newspaper" },
+                                    { id: "details", text: "Personal Details", icon: "fas fa-id-card-clip" },
+                                    { id: "address", text: "Present & Permanent Address", icon: "fas fa-map-location-dot" },
+                                    { id: "projects", text: "Software & Web Applications Projects", icon: "fas fa-code" },
+                                    { id: "experience", text: "Employment Experience", icon: "fas fa-clipboard-user" },
+                                    { id: "experience", text: "Training Received", icon: "fas fa-truck-fast" },
+                                    { id: "reference", text: "Reference", icon: "fas fa-circle-user" },
+                                    { id: "contact", text: "Contact", icon: "fas fa-phone-volume" }
+                                ];
+                                const sideMenu = document.getElementById("side-menu");
+                                menuItems.forEach(item => {
+                                    const li = document.createElement("li");
+                                    li.innerHTML = `<a href="#${item.id}">${item.text} <i class="${item.icon}"></i></a>`;
+                                    sideMenu.appendChild(li);
+                                });
+                            </script>
                         </div>
+
                         <div class="list-menu" style="text-align: center;">
-                            <p class="phone-text">Contact No:</p>
-                            <a href="#" class="phone-num">
-                                <p>+(88) 09638819448<br>+(88) 09697367472</p>
-                            </a>
-                            <p class="phone-text">E-mail :</p>
-                            <a href="mailto:jahidcsekurigram@gmail.com" class="phone-num">
-                                <p>jahidcsekurigram@gmail.com</p>
-                            </a>
-                            <div class="media-main">
-                                <a href="http://www.facebook.com/jahid.cse.kgm" class="media-icons" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
+                            <p class="phone-text">Contact No:
+                                <a href="#" class="phone-num">
+                                    +(88) 09638819448<br>+(88) 09697367472
                                 </a>
-                                <a href="https://www.instagram.com/jahidcsekgm/" class="media-icons" target="_blank">
-                                    <i class="fab fa-instagram"></i>
+                            </p>
+
+                            <p class="phone-text">E-mail :
+                                <a href="mailto:jahidcsekurigram@gmail.com" class="phone-num">
+                                    jahidcsekurigram@gmail.com
                                 </a>
-                                <a href="https://twitter.com/JahidCSE2" class="media-icons" target="_blank">
-                                    <i class="fab fa-x-twitter"></i>
-                                </a>
-                                <a href="https://linkedin.com/in/jahidcse96" class="media-icons" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://www.pinterest.com/jahidcsekurigram" class="media-icons"
-                                    target="_blank">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                                <a href="https://github.com/jahidcsekurigram" class="media-icons" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
+                            </p>
+                            <div class="media-main" id="social-media"></div>
+                            <script>
+                                const socialMediaLinks = [
+                                    ["http://www.facebook.com/jahid.cse.kgm", "fab fa-facebook-f"],
+                                    ["https://www.instagram.com/jahidcsekgm/", "fab fa-instagram"],
+                                    ["https://twitter.com/JahidCSE2", "fab fa-x-twitter"],
+                                    ["https://linkedin.com/in/jahidcse96", "fab fa-linkedin-in"],
+                                    ["https://www.pinterest.com/jahidcsekurigram", "fab fa-pinterest-p"],
+                                    ["https://github.com/jahidcsekurigram", "fab fa-github"]
+                                ];
+                                const container = document.getElementById("social-media");
+                                socialMediaLinks.forEach(([url, icon]) => container.innerHTML += `<a href="${url}" target="_blank" class="media-icons"><i class="${icon}"></i></a>`);
+                            </script>
+
                         </div>
                     </div>
                 </div>
@@ -111,21 +111,21 @@
                     <!-- ====================================== Introduction for Jahid CSE ===================================== -->
                     <section class="section-one" id="introduction">
                         <div class="row section-one-row">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 mcenter">
-                                <p class="hi-there fade_down">Introduction</p>
-                                <h2 class="creative fade_down">Engr. Md. Jahid Hasan</h2>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 mcenter fade_down">
+                                <p class="hi-there"><i class="fa fa-play"></i> Introduction</p>
+                                <h2 class="creative">Engr. Md. Jahid Hasan</h2>
                                 <hr>
                                 <h5 style="font-size: calc(0.5rem + .2.1vw);">Diploma in Computer Engineering</h5>
                                 <h5 style="font-size: calc(0.5rem + .2.1vw);">B.Sc. in Computer Science and Engineering
                                 </h5>
 
-                                <h6 class="visionary fade_down">Institution of Diploma Engineers, Bangladesh (IDEB) -
+                                <h6 class="visionary">Institution of Diploma Engineers, Bangladesh (IDEB) -
                                     Membership No: 77438</h6>
 
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 portfolio-img-col">
                                 <div class="position-relative zoom_in">
-                                    <img src="assets/images/jahidcse_officedesk.jpg" width="100%">
+                                    <img src="dist/images/jahidcse_officedesk.jpg" width="100%">
                                     <div class="typed-name">
                                         <p class="ityped"></p>
                                     </div>
@@ -135,10 +135,11 @@
                     </section>
 
                     <!-- ====================================== Career Objective ===================================== -->
-                    <section class="section-five" id="objective">
+                    <section class="section-five" id="objective"
+                        style="background: linear-gradient(to right, #a6e9ff, #d9ffa1)">
                         <div class="section-title fade_down">
                             <div class="line"></div>
-                            <div class="title-box">Career Objective :</div>
+                            <div class="title-box"><i class="fa-solid fa-computer"></i> Career Objective :</div>
                             <div class="line"></div>
                         </div>
                         <div class="testimonial zoom_in">
@@ -186,7 +187,8 @@
                     </script>
 
                     <!-- ====================================== Education ===================================== -->
-                    <section class="section-six" id="education">
+                    <section class="section-six" id="education"
+                        style="background-image: radial-gradient( circle 955px at 2.1% 2%,  rgba(131,249,212,1) 1.3%, rgba(131,240,249,1) 47.2%, rgba(250,212,251,1) 100.2% );">
                         <div class="row resume-sec-row">
                             <div class="col-xxl-12 col-lg-12">
                                 <div class="section-title fade_down">
@@ -306,7 +308,7 @@
                             <div class="col-xxl-12 col-xl-12 col-lg-12">
                                 <div class="section-title fade_down">
                                     <div class="line"></div>
-                                    <div class="title-box"><i class="fa-solid fa-medal"></i> Industrial Attachment:
+                                    <div class="title-box"><i class="fa-solid fa-newspaper"></i> Industrial Attachment:
                                     </div>
                                     <div class="line"></div>
                                 </div>
@@ -342,7 +344,8 @@
                             <div class="col-xxl-12 col-lg-12">
                                 <div class="section-title fade_up">
                                     <div class="line"></div>
-                                    <div class="title-box">Personal Details :</div>
+                                    <div class="title-box"><i class="fa-solid fa-id-card-clip"></i> Personal Details :
+                                    </div>
                                     <div class="line"></div>
                                 </div>
 
@@ -374,7 +377,7 @@
                     </section>
 
                     <!-- ====================================== Present & Permanent Address ===================================== -->
-                    <section class="section-two overflow-hidden" id="address">
+                    <section class="section-two overflow-hidden" id="address" style="background-color: #00ffdb ">
                         <div class="row">
                             <div class="col-xxl-12 col-xl-12 col-lg-12">
                                 <div class="section-title fade_down">
@@ -489,7 +492,8 @@
                             <div class="col-xxl-12 col-xl-12 col-lg-12">
                                 <div class="section-title fade_down">
                                     <div class="line"></div>
-                                    <div class="title-box"><i class="fa fa-map-location-dot"></i> Employment Experience
+                                    <div class="title-box"><i class="fa-solid fa-clipboard-user"></i> Employment
+                                        Experience
                                         :
                                     </div>
                                     <div class="line"></div>
@@ -558,7 +562,7 @@
 
                                 <div class="section-title fade_down">
                                     <div class="line"></div>
-                                    <div class="title-box"><i class="fa fa-map-location-dot"></i> Training Received
+                                    <div class="title-box"><i class="fa-solid fa-truck-fast"></i> Training Received
                                         :
                                     </div>
                                     <div class="line"></div>
@@ -613,7 +617,7 @@
 
                                 <div class="section-title fade_down">
                                     <div class="line"></div>
-                                    <div class="title-box"><i class="fa fa-map-location-dot"></i> Language
+                                    <div class="title-box"><i class="fa-solid fa-globe"></i> Language
                                         Proficiency :
                                     </div>
                                     <div class="line"></div>
@@ -651,91 +655,133 @@
                     <section class="section-five" id="reference">
                         <div class="section-title fade_down">
                             <div class="line"></div>
-                            <div class="title-box"><i class="fa fa-map-location-dot"></i> Reference :
+                            <div class="title-box"><i class="fa-solid fa-circle-user"></i> Reference :
                             </div>
                             <div class="line"></div>
                         </div>
-                        <div class="testimonial zoom_in" id="testimonial-container"></div>
-                        <script>
-                            const testimonials = [
-                                {
-                                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Election_Commission_Logo.svg/1994px-Election_Commission_Logo.svg.png",
-                                    name: "Md. Delower Hossain",
-                                    position: "Regional Election Officer",
-                                    office: "Regional Election Office, Rajshahi."
-                                },
-                                {
-                                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Election_Commission_Logo.svg/1994px-Election_Commission_Logo.svg.png",
-                                    name: "Md. Alamgir",
-                                    position: "District Election Officer",
-                                    office: "District Election Office, Kurigram."
-                                },
-                                {
-                                    img: "https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg",
-                                    name: "Dewan Juel Rahman",
-                                    position: "Associate Professor (Dept: CSE)",
-                                    office: "Rajshahi Science & Technology University (RSTU), Natore."
-                                },
-                                {
-                                    img: "https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg",
-                                    name: "Md. Al Amin Mahfuz (Sajol)",
-                                    position: "Assistant Professor (Dept: CSE)",
-                                    office: "Rajshahi Science & Technology University (RSTU), Natore."
-                                },
-                                {
-                                    img: "https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg",
-                                    name: "Md. Shahidul Islam Shabuz",
-                                    position: "Lecturer (Dept: CSE)",
-                                    office: "Rajshahi Science & Technology University (RSTU), Natore."
-                                },
-                                {
-                                    img: "assets/images/reference/vpi_logo.png",
-                                    name: "Muhammad Shahjalal Sabuj",
-                                    position: "Principal",
-                                    office: "Vision Polytechnic Institute, Kurigram."
-                                },
-                                {
-                                    img: "https://esdo.net.bd/wp-content/uploads/2021/06/024853.png",
-                                    name: "Md. Juwel Rana",
-                                    position: "Project Manager",
-                                    office: "Eco-Social Development Organization (ESDO), Kurigram."
-                                },
-                                {
-                                    img: "assets/images/reference/phs_logo.png",
-                                    name: "Md. Aminul Islam Khan (Liton)",
-                                    position: "Assistant Head Master",
-                                    office: "Panchgachi High School, Kurigram."
-                                },
-                                {
-                                    img: "assets/images/reference/antar_logo.svg",
-                                    name: "Antar Rahman",
-                                    position: "Proprietor",
-                                    office: "Kazi Robin & Brother’s Agro, Cox's Bazar & Kurigram."
-                                },
-                                {
-                                    img: "https://teachers.gov.bd/shared/profile_pictures/5dqdhM6M1sO0kknSS9BMNIP5Wl1elnPkCGyBZvDK.png",
-                                    name: "Engr. Md. Nazmul Haque",
-                                    position: "Head Master",
-                                    office: "Alor Dishary Ideal School, Gazipur."
-                                }
-                            ];
 
-                            const container = document.getElementById("testimonial-container");
-                            testimonials.forEach(item => {
-                                container.innerHTML += `
+                        <div class="testimonial zoom_in">
                             <div class="testimonial-box">
-                                <img class="client-img" src="${item.img}">
+                                <img class="client-img"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Election_Commission_Logo.svg/1994px-Election_Commission_Logo.svg.png">
                                 <div class="slider-text-group">
-                                <div class="am-text-main"><p>${item.name}</p></div>
-                                <p class="Neque">${item.position}<br>${item.office}</p>
+                                    <div class="am-text-main">
+                                        <p>Md. Delower Hossain</p>
+                                    </div>
+                                    <p class="Neque">Regional Election Officer<br>
+                                        Regional Election Office, <br> Rajshahi.
+                                    </p>
                                 </div>
-                            </div> `;
-                            });
-                        </script>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Election_Commission_Logo.svg/1994px-Election_Commission_Logo.svg.png">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Md. Alamgir</p>
+                                    </div>
+                                    <p class="Neque">District Election Officer<br>
+                                        District Election Office, <br> Kurigram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Dewan Juel Rahman</p>
+                                    </div>
+                                    <p class="Neque">Associate Professor (Dept: CSE)<br>
+                                        Rajshahi Science & Technology University (RSTU), <br>Natore.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Md. Al Amin Mahfuz (Sajol)</p>
+                                    </div>
+                                    <p class="Neque">Assistant Professor (Dept: CSE)<br>
+                                        Rajshahi Science & Technology University (RSTU), <br>Natore.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/RSTU_logo.jpg">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Md. Shahidul Islam Shabuz</p>
+                                    </div>
+                                    <p class="Neque">Lecturer (Dept: CSE)<br>
+                                        Rajshahi Science & Technology University (RSTU), <br>Natore.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img" src="dist/images/reference/vpi_logo.png">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Muhammad Shahjalal Sabuj</p>
+                                    </div>
+                                    <p class="Neque">Principal<br>
+                                        Vision Polytechnic Institute,<br> Kurigram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img" src="https://esdo.net.bd/wp-content/uploads/2021/06/024853.png">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Md. Juwel Rana</p>
+                                    </div>
+                                    <p class="Neque">Project Manager<br>
+                                        Eco-Social Development Organization (ESDO),<br> Kurigram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img" src="dist/images/reference/phs_logo.png">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Md. Aminul Islam Khan (Liton)</p>
+                                    </div>
+                                    <p class="Neque">Assistant Head Master<br>
+                                        Panchgachi High School,<br> Kurigram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img" src="dist/images/reference/antar_logo.svg">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Antar Rahman</p>
+                                    </div>
+                                    <p class="Neque">Proprietor<br>
+                                        Kazi Robin & Brother’s Agro,<br> Cox's Bazar & Kurigram.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-box">
+                                <img class="client-img"
+                                    src="https://teachers.gov.bd/shared/profile_pictures/5dqdhM6M1sO0kknSS9BMNIP5Wl1elnPkCGyBZvDK.png">
+                                <div class="slider-text-group">
+                                    <div class="am-text-main">
+                                        <p>Engr. Md. Nazmul Haque</p>
+                                    </div>
+                                    <p class="Neque">Head Master<br>
+                                        Alor Dishary Ideal School,<br> Gazipur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="section-title fade_down">
                             <div class="line"></div>
-                            <div class="title-box"><i class="fa fa-map-location-dot"></i> Interests :
+                            <div class="title-box"><i class="fa-solid fa-palette"></i> Interests :
                             </div>
                             <div class="line"></div>
                         </div>
@@ -750,7 +796,8 @@
                     </section>
 
                     <!-- ====================================== Contact Us ===================================== -->
-                    <section class="section-nine" id="contact">
+                    <section class="section-nine" id="contact"
+                        style="background: linear-gradient(160deg, #00C9FF 0%, #92FE9D 40%) ">
                         <h3 class="creative brand fade_down">Contact <span> Us</span></h3>
                         <div class="contact-box-grid">
                             <div class="contact-sec-box zoom_in">
@@ -788,16 +835,16 @@
     <!-- ====================================== Bottom To Top Button ===================================== -->
     <button class="bottom-top-button"><i class="fas fa-arrow-up"></i></button>
     <!-- ====================================== Bottom To Top Button End ===================================== -->
-    <script src="assets/javascript/jquery.min.js"></script>
-    <script src="assets/javascript/gsap.js"></script>
-    <script src="assets/javascript/bootstrap.min.js"></script>
-    <script src="assets/javascript/magnific-popup.min.js"></script>
-    <script src="assets/javascript/fancybox.min.js"></script>
-    <script src="assets/javascript/typing.js"></script>
-    <script src="assets/javascript/smooth-scroll.js"></script>
-    <script src="assets/javascript/slick.min.js"></script>
-    <script src="assets/javascript/bg-animation/circle.js"></script>
-    <script src="assets/javascript/script.js"></script>
+    <script src="dist/javascript/jquery.min.js"></script>
+    <script src="dist/javascript/gsap.js"></script>
+    <script src="dist/javascript/bootstrap.min.js"></script>
+    <script src="dist/javascript/magnific-popup.min.js"></script>
+    <script src="dist/javascript/fancybox.min.js"></script>
+    <script src="dist/javascript/typing.js"></script>
+    <script src="dist/javascript/smooth-scroll.js"></script>
+    <script src="dist/javascript/slick.min.js"></script>
+    <script src="dist/javascript/bg-animation/circle.js"></script>
+    <script src="dist/javascript/script.js"></script>
     <script>
         const toggleBtn = document.getElementById("darkModeToggle");
         const body = document.body;

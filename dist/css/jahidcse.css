@@ -244,3 +244,191 @@ table.table-sm th {
 .dark-mode table tr:hover {
   background-color: #333 !important;
 }
+body.dark-mode header,
+body.dark-mode .pricing-plaines-name,
+body.dark-mode .project-card,
+body.dark-mode #objective,
+body.dark-mode #education,
+body.dark-mode #address,
+body.dark-mode #contact {
+  background: #1e1f21 !important;
+  color: #fff !important;
+}
+
+body.dark-mode section {
+  color: #fff;
+}
+
+/* Extra small devices (default: mobile first) */
+body {
+  font-size: 14px;
+}
+
+h1,
+.section-title .title-box {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p,
+li,
+a,
+span {
+  font-size: 14px;
+}
+
+.phone-text,
+.phone-num {
+  font-size: 13px;
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  body {
+    font-size: 15px;
+  }
+  h1,
+  .section-title .title-box {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p,
+  li,
+  a,
+  span {
+    font-size: 15px;
+  }
+  .phone-text,
+  .phone-num {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  h1,
+  .section-title .title-box {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  p,
+  li,
+  a,
+  span {
+    font-size: 16px;
+  }
+  .phone-text,
+  .phone-num {
+    font-size: 15px;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+  h1,
+  .section-title .title-box {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  p,
+  li,
+  a,
+  span {
+    font-size: 17px;
+  }
+  .phone-text,
+  .phone-num {
+    font-size: 16px;
+  }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  h1,
+  .section-title .title-box {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  p,
+  li,
+  a,
+  span {
+    font-size: 18px;
+  }
+  .phone-text,
+  .phone-num {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Base font */
+  body {
+    font-size: clamp(0.75rem, 0.6rem + 1vw, 0.95rem); /* ~12px - 15px */
+    line-height: 1.5;
+  }
+
+  /* Headings */
+  h1,
+  .section-title .title-box {
+    font-size: clamp(1.25rem, 1rem + 3vw, 1.75rem); /* ~20px - 28px */
+  }
+
+  h2 {
+    font-size: clamp(1.1rem, 0.9rem + 2.5vw, 1.5rem); /* ~18px - 24px */
+  }
+
+  h3 {
+    font-size: clamp(1rem, 0.8rem + 2vw, 1.25rem); /* ~16px - 20px */
+  }
+
+  /* Paragraphs, list items, links, spans */
+  p,
+  li,
+  a,
+  span {
+    font-size: clamp(0.8rem, 0.7rem + 1vw, 1rem); /* ~13px - 16px */
+  }
+
+  /* Phone text smaller */
+  .phone-text,
+  .phone-num {
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.9rem); /* ~12px - 14px */
+  }
+}
