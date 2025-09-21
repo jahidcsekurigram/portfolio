@@ -304,6 +304,7 @@ header {
   color: #fff;
   font-weight: 700;
   text-shadow: 1px 1px 6px #000;
+  margin: 0px;
 }
 
 @media (max-width: 600px) {
