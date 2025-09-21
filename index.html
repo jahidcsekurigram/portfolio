@@ -33,8 +33,8 @@
                     Resume of Md. Jahid Hasan
                 </h3>
                 <div class="aryaBtn-toggle-main mt-0">
-                    <a href="dist/pdf/Resume.pdf" class="portfolioBtn hire-me-btn">
-                        Portfolio <i class="fa-regular fa-address-card"></i>
+                    <a href="dist/pdf/index.html" class="portfolioBtn hire-me-btn">
+                        <i class="fa fa-id-card-clip"></i> Download
                     </a>
                     <!-- <a href="#" class="portfolioBtn hire-me-btn" onclick="downloadResume()">
                         Portfolio <i class="fa-regular fa-address-card"></i>
@@ -138,6 +138,11 @@
                     <section class="section-one" id="introduction">
                         <div class="row section-one-row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 mcenter fade_down">
+                                <div class="download-btn d-flex justify-content-center">
+                                    <a href="dist/pdf/index.html" class="cvBtn d-lg-block d-xl-none">
+                                        <i class=" fa fa-download"></i> Download Resume
+                                    </a>
+                                </div>
                                 <p class="hi-there"><i class="fa fa-play"></i> Introduction</p>
                                 <h2 class="creative">Engr. Md. Jahid Hasan</h2>
                                 <hr>
@@ -147,8 +152,8 @@
 
                                 <h6 class="visionary">Institution of Diploma Engineers, Bangladesh (IDEB) -
                                     Membership No: 77438</h6>
-
                             </div>
+
                             <div class="col-xxl-6 col-xl-6 col-lg-6 portfolio-img-col">
                                 <div class="position-relative zoom_in">
                                     <img src="dist/images/jahidcse_officedesk.jpg" width="100%">
@@ -892,29 +897,6 @@
             }
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    <canvas id="pdf-canvas"></canvas>
-    <script>
-        const url = 'dist/pdf/Resume.pdf';
-        const canvas = document.getElementById('pdf-canvas');
-        const ctx = canvas.getContext('2d');
 
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            pdf.getPage(1).then(page => {
-                const scale = 1.5;
-                const viewport = page.getViewport({ scale });
-
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = {
-                    canvasContext: ctx,
-                    viewport
-                };
-
-                page.render(renderContext);
-            });
-        });
-    </script>
 
 </body>

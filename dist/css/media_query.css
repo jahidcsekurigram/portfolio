@@ -350,7 +350,8 @@
   .download-btn {
     display: flex;
     align-items: start;
-    margin-top: 25px;
+    margin-top: -20px;
+    margin-bottom: 15px;
   }
   .arya-stack-about {
     font-size: 34px;
