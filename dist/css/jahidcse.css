@@ -432,3 +432,18 @@ span {
     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 0.9rem); /* ~12px - 14px */
   }
 }
+
+.certificate-slider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.certificate-item {
+  padding: 10px;
+}
+
+.certificate-item img {
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
