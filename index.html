@@ -16,6 +16,31 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="stylesheet" href="dist/css/media_query.css">
     <link rel="stylesheet" href="dist/css/jahidcse.css">
+    <script>
+        window.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
+        document.onselectstart = function pauseEvent(e) {
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.preventDefault) e.preventDefault();
+            e.cancelBubble = true;
+            e.returnValue = false;
+            return false;
+        }
+    </script>
+    <script>
+        $('img').mousedown(function (e) {
+            if (e.button == 2) { // right click
+                return false; // do nothing!
+            }
+        });
+    </script>
+    <script language="javascript">
+        var noPrint = true;
+        var noCopy = true;
+        var noScreenshot = true;
+        var autoBlur = true;
+    </script>
 </head>
 
 <body>
@@ -283,6 +308,26 @@
                                         </div>
                                     </div>
                                 </div> -->
+                                <div class="certificate-slider zoom_in">
+                                    <div class="certificate-item">
+                                        <img src="certificate/diploma_certificate.jpg" alt="Certificate 1">
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="certificate/diploma_provisional_certificate.jpg" alt="Certificate 2">
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="certificate/diploma_academic_transcript_8th.jpg" alt="Certificate 3">
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="certificate/diploma_academic_transcript_6th.jpg" alt="Certificate 4">
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="certificate/diploma_academic_transcript_5th.jpg" alt="Certificate 5">
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="certificate/PS.jpg" alt="Certificate 6">
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
